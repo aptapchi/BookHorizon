@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read Book - [Your Library Name]</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to shared CSS -->
+  </head>
+  <body>
+    <header>
+      <h1>Read Your Book</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <main>
+      <section id="book-viewer">
+        <h2>Enjoy Reading!</h2>
+        <iframe id="pdf-viewer" width="100%" height="600px" src=""></iframe>
+        <div class="action">
+          <a href="explore.html" class="button">Go Back to Explore</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy;បង្កើតឡើងដោយកូនខ្មែរស្មោះស្នេហ៍គ្មានពីរលើលោក។</p>
+    </footer>
+
+    <script>
+      // Extract the book parameter from the URL
+      const params = new URLSearchParams(window.location.search);
+      const book = params.get("book");
+
+      // Update the iframe source dynamically based on the selected book
+      if (book) {
+        document.getElementById("pdf-viewer").src = `books/${book}.pdf`;
+      } else {
+        document.getElementById("book-viewer").innerHTML =
+          "<p>Book not found. Please go back to the explore page.</p>";
+      }
+    </script>
+  </body>
+</html>
