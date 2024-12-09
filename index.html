@@ -3,85 +3,258 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BOOK HORIZON</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Link to the shared CSS -->
+    <title>lngea nas</title>
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
     <header>
-      <h1>Welcome to BOOK HORIZON</h1>
-      <p>Your Gateway to Knowledge, Creativity, and Community</p>
-    </header>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="explore.html">Explore</a>
-      <a href="#membership">Membership</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <main>
-      <section id="welcome">
-        <h2>Discover, Learn, and Grow</h2>
-        <p>
-          Welcome to BOOK HORIZON, your hub for books, resources, and community
-          events. Join us in exploring a world of knowledge at your fingertips.
-        </p>
-        <div class="action">
-          <a href="explore.html" class="button">Explore Books</a>
+      <nav class="navigation container-width">
+        <div class="logo">
+          <img src="images/Book-library-for-everyone.png" alt="" />
         </div>
-      </section>
+        <a href="index.html">Home</a>
+        <a href="explore.html" class="active">Explore</a>
+        <a href="#contact">Categoies</a>
+        <a href="Donate.html">Donate</a>
       
-</div>
-      <section id="services">
-        <h2>What We Offer</h2>
-        <ul>
-          <li>
-            <strong>Books, eBooks, and Audiobooks:</strong> A wide variety of
-            formats to suit your preferences.
-          </li>
-          <li>
-            <strong>Research Tools:</strong> Access to databases, journals, and
-            archives.
-          </li>
-          <li>
-            <strong>Community Events:</strong> Workshops, book clubs, and
-            special events for all ages.
-          </li>
-          <li>
-            <strong>Study Spaces:</strong> Quiet areas, group rooms, and
-            computer stations.
-          </li>
-        </ul>
-      </section>
-      <section id="membership">
-        <h2>Become a Member Today!</h2>
-        <p>
-          Unlock exclusive benefits like borrowing privileges, event
-          invitations, and access to digital resources. Signing up is easy and
-          free!
-        </p>
-      </section>
-      <section id="contact">
-        <h2>Stay Connected</h2>
-        <p>
-          Follow us on social media for updates on new arrivals, upcoming
-          events, and community news. Don’t forget to subscribe to our
-          newsletter!
-        </p>
-        <p><strong>Visit Us:</strong></p>
-        <p>
-          <strong>Library Address: knung besdong u </strong>[Library Address]
-        </p>
-        <p><strong>Library Hours: 27/7</strong> [Library Hours]</p>
-        <p><strong>Contact:</strong> [Contact Information]</p>
-      </section>
-    </main>
-    <footer><p><strong>Visit Us:</strong></p>
-        <p>
-          <strong>Library Address: knung besdong u </strong>[Library Address]
-        </p>
-        <p><strong>Library Hours: 27/7</strong> [Library Hours]</p>
-        <p><strong>Contact:</strong> [Contact Information]</p>
-      <p>&copy; បង្កើតឡើងដោយកូនខ្មែរស្មោះស្នេហ៍គ្មានពីរលើលោក។</p>
-    </footer>
+        <div class="login">
+          <a href="login.html">Login/SignUp</a>
+        </div>
+      </nav>
+    </header>
+    <div class="box">
+      <h2>Explore & Read Book online Free</h2>
+      <p>This text box is positioned on the right side of the page. You can customize the content as needed!</p>
+      <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img
+            src="images/the mericle morning.jpg"
+            alt="Bookshelves filled with books"
+          />
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img
+            src="images/BetterThanBeforePaperback.jpg"
+            alt="A cozy reading corner"
+          />
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img
+            src="images/Follow your heart.jpg"
+            alt="Library events in action"
+          />
+        </div>
+  
+        <!-- Navigation -->
+      
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+      </div>
+  
+      <!-- Dots for navigation -->
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+    
+
+    <script>
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        if (index >= slides.length) currentIndex = 0;
+        if (index < 0) currentIndex = slides.length - 1;
+
+        slides.forEach((slide, i) => {
+          slide.style.display = i === currentIndex ? "block" : "none";
+        });
+
+        dots.forEach((dot, i) => {
+          dot.className = i === currentIndex ? "dot active" : "dot";
+        });
+      }
+
+      function changeSlide(step) {
+        currentIndex += step;
+        showSlide(currentIndex);
+      }
+
+      function currentSlide(index) {
+        currentIndex = index - 1;
+        showSlide(currentIndex);
+      }
+
+      function autoPlay() {
+        changeSlide(1);
+        setTimeout(autoPlay, 5000); // Change every 5 seconds
+      }
+
+      showSlide(currentIndex);
+      autoPlay();
+    </script>
+    <div class="content">
+      <h1>Welcome to Book horizon</h1>
+      <h4 >Book Horizon is your gateway to a growing library of digital books.<br> 
+        As of today, we only have 40 amazing books ready for you to explore.<br> 
+        No ads, no limits—just pure reading joy. Dive in, discover something new,<br> and don’t forget to bookmark and share the knowledge!
+        <br>
+        <br>
+  <h2> Free ebooks, audiobooks &<br>
+    magazines from your library
+  </h2>
+  <div class="logo-app">
+        <img src="images/Liceria.png" alt="logo app">
+      </div>
+        <br>
+      </p>
+
+       <h1 style="text-align: center;"> Book Popular</h1>
+       <div class="book-list">
+        <div class="book-item">
+          <img src="images/TheLittlePrince.jpg" alt="Book 1" />
+          <h3>The Little Prince</h3>
+          <p>Author: John Doe</p>
+          <a href="book-detail.html?book=The Little Prince" class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/Mindset.png" alt="Book 2" />
+          <h3>Mindset</h3>
+          <p>Author: Carol Dweck</p>
+          <a href="book-detail.html?book=Mindset" class="button">Read Book</a>
+        </div>
+        <div class="book-item">
+          <img src="images/The Richest Man in Babylon.jpg" alt="Book 3" />
+          <h3>The Richest Man in Babylon</h3>
+          <p>Author: George Samuel Clason</p>
+          <a
+            href="book-detail.html?book=The Richest Man in Babylon"
+            class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/Have Fun Be Safe I Love You.jpg" alt="Book 4" />
+          <h3>Have Fun Be Safe I Love U</h3>
+          <p>Author: Alex Johnson</p>
+          <a href="book-detail.html?book=Have" class="button">Read Book</a>
+        </div>
+        <div class="book-item">
+          <img src="images/BetterThanBeforePaperback.jpg" alt="Book 5" />
+          <h3>Better Than Before</h3>
+          <p>Author: Alex Johnson</p>
+          <a href="book-detail.html?book=\Better Than Before" class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/Follow your heart.jpg" alt="Book 7" />
+          <h3>Follow Your Heart</h3>
+          <p>Author: Andrew Matthews</p>
+          <a href="book-detail.html?book=Follow Your Heart" class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/being happy.jpg" alt="Book 8" />
+          <h3>Being Happy</h3>
+          <p>Author: Andrew Matthews</p>
+          <a href="book-detail.html?book=Being Happy" class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/the mericle morning.jpg" alt="Book 9" />
+          <h3>The Miracle Morning</h3>
+          <p>Author: Andrew Matthews</p>
+          <a href="book-detail.html?book=The Miracle Morning" class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/think and grow rice.jpg" alt="Book 10" />
+          <h3>Think and Grow Rich</h3>
+          <p>Author: Andrew Matthews</p>
+          <a href="book-detail.html?book=Think And Grow Rich" class="button"
+            >Read Book</a
+          >
+        </div>
+        <div class="book-item">
+          <img src="images/Dare to Fail.jpg" alt="Book 14" />
+          <h3>Dare To Fail</h3>
+          <p>Author: Billi Lim</p>
+          <a href="book-detail.html?book=Dare To Fail" class="button"
+            >Read Book</a
+          >
+        </div>
+
+        
+     
+        
+    </div>
+    <br>
+        <br>
+        <br>
+      
+   
   </body>
+        <footer>
+          <div class="footer-container">
+            <div class="footer-section">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="help.html">Help Center</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>About Us</h4>
+              <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="team.html">Meet the Team</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Contact Us</h4>
+              <div class="social-icons">
+                  <a href="https://facebook.com" target="_blank">
+                  <img src="images/facebook-brands-solid.svg" alt="Facebook" />
+                </a>
+                <a href="https://telegram.org" target="_blank">
+                  <img src="images/telegram-brands-solid.svg" alt="Telegram" />
+                </a>
+                <a href="https://discord.com" target="_blank">
+                  <img src="images/discord-brands-solid.svg" alt="Discord" />
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                  <img src="images/instagram-brands-solid.svg" alt="Instagram" />
+                </a>
+                <a href="https://github.com" target="_blank">
+                  <img src="images/github-brands-solid.svg" alt="GitHub" />
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                  <img src="images/youtube-brands-solid.svg" alt="Youtube" />
+                </a>
+                <a href="https://x-twitter.com" target="_blank">
+                  <img src="images/x-twitter-brands-solid (1).svg" alt="x-twitter" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 BookHorizon. All rights reserved.</p>
+          </div>
+        </footer>
+        
+    
+  
 </html>
