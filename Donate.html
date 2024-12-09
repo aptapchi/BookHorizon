@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Membership</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f7f7f7;
+      }
+
+      header {
+        text-align: center;
+        background-color: #008700;
+        color: white;
+        padding: 20px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      button {
+        background-color: #008700;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #008700;
+      }
+
+      /* Membership Section */
+      .membership-tiers {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .membership-tiers h2 {
+        text-align: center;
+      }
+
+      .tier {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .tier h3 {
+        color: #008700;
+      }
+
+      .tier ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .tier li {
+        margin: 10px 0;
+      }
+
+      /* One-Time Support Section */
+      .one-time-support {
+        text-align: center;
+        padding: 20px;
+        background: #f0f0f0;
+        border-radius: 8px;
+        margin: 30px auto;
+        max-width: 800px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+      }
+      .back-button {
+        margin: 20px auto;
+        text-align: center;
+      }
+      img {
+        width: 200px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Support Your Library</h1>
+      <p>Join our community and help keep the library thriving.</p>
+    </header>
+
+    <section class="one-time-support">
+      <h2>កន្លែងបរិច្ចាក</h2>
+
+      <img src="images/hikhik.jpg" alt="" />
+      <p>donate moa nh ng sby jit .</p>
+      <div class="back-button">
+        <button onclick="goBack()">← Back</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>បង្កើតឡើងដោយកូនខ្មែរស្មោះស្នេហ៍គ្មានពីរលើលោក។. ❤️</p>
+    </footer>
+    <script>
+      function goBack() {
+        window.history.back(); // Navigate back to the previous page
+      }
+    </script>
+  </body>
+</html>
