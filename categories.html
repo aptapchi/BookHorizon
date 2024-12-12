@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHorizon</title>
     <link rel="stylesheet" href="categories.css" />
-</head>
-<style>
-  
-</style>
-<body>  
+    <!-- Link to shared CSS -->
+  </head>
+  <body>
     <header>
-      <nav class="navigation container-width">
-        <div class="logo">
-          <img src="images/Book library for everyone.png" alt="" />
-        </div>
-      </nav>
     </header>
+    <div class="logo-container">
+      <img src="images/Book library for everyone.png"  class="logo"/>
+    
     <nav>
       <a href="index.html">Home</a>
       <a href="explore.html" class="active">Explore</a>
-      <a href="categories.html">Categoies</a>
+      <a href="categories.html">Categories</a>
       <a href="Donate.html">Donate</a>
     </nav>
-    <section id="books">
+  </div>
+    <main>
+      <section id="books">
         <h2 class="books-available" >Self-Improvement & Motivation</h2>
         <div class="book-list">
             <div class="book-item">
@@ -307,5 +305,56 @@
               <p>Author: Alex Johnson</p>
               <a href="book-detail.html?book=Have" class="button">Read Book</a>
             </div>
-</body>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="help.html">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="team.html">Meet the Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook-brands-solid.svg" alt="Facebook" />
+            </a>
+            <a href="https://telegram.org" target="_blank">
+              <img src="images/telegram-brands-solid.svg" alt="Telegram" />
+            </a>
+            <a href="https://discord.com" target="_blank">
+              <img src="images/discord-brands-solid.svg" alt="Discord" />
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram-brands-solid.svg" alt="Instagram" />
+            </a>
+            <a href="https://github.com" target="_blank">
+              <img src="images/github-brands-solid.svg" alt="GitHub" />
+            </a>
+            <a href="https://youtube.com" target="_blank">
+              <img src="images/youtube-brands-solid.svg" alt="Youtube" />
+            </a>
+            <a href="https://x-twitter.com" target="_blank">
+              <img
+                src="images/x-twitter-brands-solid (1).svg"
+                alt="x-twitter"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 BookHorizon. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
